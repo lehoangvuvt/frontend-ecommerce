@@ -1,0 +1,42 @@
+.itemProduct {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ededde;
+}
+
+.showImage {
+    width: 120px;
+    height: 120px;
+}
+
+.body {
+    align-self: center;
+}
+.flexBody {
+    max-width: 50%;
+}
+
+.priceText {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.productName{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.productName:hover{
+    color: #222529;
+}
+
+.stocking{
+    color:#1b8a1b;
+    font-size: 1.3rem;
+}
+
+.outOfStock{
+    color: red;
+}

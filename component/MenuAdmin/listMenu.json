@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "Account Dashboard",
+        "key" : ""
+    },
+    {
+        "name" : "Account Information",
+        "key" : ""
+    },
+    {
+        "name" : "Address Book",
+        "key" : "address"
+    },
+    {
+        "name" : "My Orders",
+        "key" : "orders"
+    },
+    {
+        "name" : "Billing Agreements",
+        "key" : ""
+    },
+    {
+        "name" : "Recurring Profiles",
+        "key" : ""
+    },
+    {
+        "name" : "My Product Reviews",
+        "key" : ""
+    },
+    {
+        "name" : "My tags",
+        "key" : ""
+    },
+    {
+        "name" : "My Wishlist",
+        "key" : "wishlist"
+    },
+    {
+        "name" : "My Applications",
+        "key" : ""
+    },
+    {
+        "name" : "Newsletter Subscriptions",
+        "key" : ""
+    },
+    {
+        "name" : "Point",
+        "key" : "point"
+    }
+]

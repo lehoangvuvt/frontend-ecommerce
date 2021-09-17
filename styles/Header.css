@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.top-notice {
+    position: relative;
+    padding: 1rem 2rem;
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    line-height: 2;
+    letter-spacing: 0.025em;
+    padding-top: 9px;
+    padding-bottom: 11px;
+}
+
+.bg-dark {
+    background-color: #222529 !important;
+}
+
+.header {
+    height: 150px;
+}
+
+.header-left {
+    width: 100%;
+    margin-left: -5%;
+    display: flex;
+}
+
+.header-right {
+    margin-right: -6%;
+}
+
+.main-nav {
+    width: 40%;
+}
+
+.search-container {
+    position: relative;
+    width: 30%;
+    margin-left: 10%;
+    display: flex;
+    flex-flow: column wrap;
+    z-index: 20;
+}
+
+@media screen and (max-width: 1100px) {
+    .search-container {
+        right: 8%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .search-container {
+        width: 92%;
+        right: 4%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .search-container {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+}
+
+.search-bar-modal {
+    width: 100%;
+    height: 38px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    align-items: flex-start;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.search-bar-modal__left,
+.search-bar-modal__center,
+.search-bar-modal__right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search-bar-modal__left {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.search-bar-modal__left > input {
+    width: 80%;
+    margin-left: 4%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.search-bar-modal__left > input::placeholder {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.search-bar-modal__center {
+    width: 0%;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-modal__center > select {
+    width: 90%;
+    margin-left: 2%;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.search-option {
+    width: 50px;
+}
+
+.search-bar-modal__right {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.search-bar-modal__right > i {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.suggested-terms-container {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    display: flex;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+}
+
+.suggested-term-container {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.suggested-term-container:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.suggested-term-container > h1 {
+    margin-left: 5%;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#remove-item-btn:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.menu > li > a {
+    cursor: pointer;
+}
+
+.sub-menu {
+    width: 100.5%;
+    background-color: #ecf0f1;
+    top: 75%;
+    left: -0.5%;
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    animation: appearSubMenu 0.3s ease;
+}
+
+.sub-menu > div > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sub-menu > div > div:hover {
+    text-decoration: underline;
+}
+
+@keyframes appearSubMenu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sub-menu > div > div > h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.sub-menu-right-block {
+    margin-left: 15%;
+    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.add-to-cart-success-modal {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid #bfbfbf;
+    top: 77%;
+    left: 77.5%;
+    z-index: 101;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.add-to-cart-success-modal::before {
+    z-index: 200;
+    left: 88%;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-left-style: solid;
+    border-top-style: solid;
+    top: -6px;
+    content: "";
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-color: #bfbfbf;
+}
+
+.add-to-cart-success-modal > div:nth-child(1) {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.425rem;
+}
+
+.add-to-cart-success-modal > div:nth-child(1) > i {
+    font-size: 1.7rem;
+    color: rgb(63, 81, 181);
+}
+
+.add-to-cart-success-modal > button {
+    width: 88%;
+    height: 38px;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    background-color: rgb(63, 81, 181);
+    color: white;
+    cursor: pointer;
+}
+
+.login-modal-container, .order-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 102;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: appearLoginModal 0.25s;
+}
+
+@keyframes appearLoginModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.login-modal, .order-modal {
+    width: 80%;
+    height: 87%;
+    min-height: 570px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.order-modal {
+    background-color: rgb(240,240,240);
+}
+
+.login-modal-top, .order-modal-top {
+    width: 100%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login-modal-top > i {
+    font-size: 1.65rem;
+    padding-right: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.login-modal-top > i:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.login-modal-bottom, .order-modal-bottom {
+    width: 100%;
+    height: 94%;
+    background-color: white;
+    display: flex;
+    overflow-y: auto;
+}
+
+.order-modal-bottom {
+    background-color: inherit !important;
+}
+
+
+.login-modal-bottom > div {
+    transform: scaleY(0.8) scaleX(0.9);
+    margin-top: -80px;
+    font-size: 1.05rem;
+}
+
+.check-order-modal {
+    position: absolute;
+    width: 250px;
+    height: 260px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid #bfbfbf;
+    margin-top: 25px;
+    z-index: 101;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    animation: appearCheckOrderModal 0.5s ease;
+}
+
+@keyframes appearCheckOrderModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.check-order-modal > button {
+    border: none;
+    outline: none;
+    width: 86%;
+    height: 38px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #254a5f;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.check-order-modal > button:hover {
+    opacity: 1;
+}
+
+.check-order-modal > button > i {
+    font-size: 1.7rem;
+    color: white;
+}
+
+.check-order-modal::before {
+    z-index: 200;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-left-style: solid;
+    border-top-style: solid;
+    top: -6px;
+    content: "";
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-color: #bfbfbf;
+}
+
+.check-order-modal-title {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.check-order-modal-title > p {
+    font-size: 1.65rem;
+    padding-left: 15px;
+    color: #254a5f;
+}
+
+.check-order-modal-field {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.check-order-modal-field-title {
+    width: 100%;
+    height: 35%;
+    vertical-align: middle;
+}
+
+.check-order-modal-field-title > p {
+    font-size: 1.23rem;
+    padding-left: 15px;
+}
+
+.check-order-modal-field-input {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-order-modal-field-input > input {
+    width: 86%;
+    height: 90%;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-top: 3px solid rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.check-modal-menu {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}

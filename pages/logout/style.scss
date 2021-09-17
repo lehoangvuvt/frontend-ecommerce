@@ -1,0 +1,16 @@
+.logout-container {
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    background-color: white;
+    height: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > h1 {
+        margin-bottom: 40px;
+        margin-top: 15px;
+    }
+}

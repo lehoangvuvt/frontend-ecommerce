@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.active-account-container {
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    background-color: white;
+    height: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    animation: appear 0.5s ease;
+
+    & > i {
+        font-size: 6rem;
+    }
+
+    & > h1 {
+        font-size: 1.8rem;
+        font-family: "Poppins", sans-serif;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    & > a {
+        font-size: 1.5rem;
+        font-family: "Roboto", sans-serif;
+        color: #3f51b5;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

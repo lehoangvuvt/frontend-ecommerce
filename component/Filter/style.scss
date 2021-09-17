@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.filter-containers {
+    &__filter {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 2.5px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1000px) {
+            border: none;
+        }
+
+        &:nth-child(1) {
+            margin-top: 10px;
+        }
+
+        &__header {
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &__left {
+                width: 80%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 1.125em;
+                font-family: "Roboto", sans-serif;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 0.25px;
+                padding-left: 15px;
+            }
+
+            &__right {
+                width: 20%;
+                position: relative;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: black;
+                    width: 8px;
+                    height: 2px;
+                }
+                &--active {
+                    &::after {
+                        transform: rotate(0deg);
+                        animation: rotate-active 0.2s linear;
+                    }
+
+                    @keyframes rotate-active {
+                        from {
+                            transform: rotate(-90deg);
+                        }
+                        to {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+                &--disabled {
+                    &::after {
+                        transform: rotate(90deg);
+                        animation: rotate-disabled 0.2s linear;
+                    }
+
+                    @keyframes rotate-disabled {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__body {
+            width: 100%;
+            transition: all 0.5s linear;
+            transform-origin: top;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &__value {
+                width: 100%;
+                height: 30px;
+                padding-left: 18px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 2em !important;
+                cursor: pointer;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+
+    &__price-filter {
+        background-color: red;
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.MuiCheckbox-root {
+    & > .MuiIconButton-label {
+        & > .MuiSvgIcon-root {
+            transform: scale(1.3) !important;
+        }
+    }
+}
+
+.MuiTypography-body1 {
+    font-family: "Roboto", sans-serif !important;
+    font-size: 1.325rem !important;
+    color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,26 @@
+.point-panel {
+    width: 100%;
+    background-color: white;
+    height: auto;
+    padding: 10px 0;
+}
+
+.table-information-point {
+    .MuiTableHead-root, .MuiTableBody-root {
+        tr {
+            th,td {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+.table-pagination {
+    display: flex;
+    justify-content: flex-end;
+    div {
+        * {
+            font-size: 1.1rem;
+        }
+    }
+}

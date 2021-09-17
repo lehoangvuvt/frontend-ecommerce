@@ -1,0 +1,26 @@
+.root {
+    width: 100%;
+}
+
+.paperContainer {
+    margin-bottom: 5px;
+}
+
+.container {
+    max-height: 440px;
+    height: 440px;
+}
+
+.containerOrder {
+    width: 100%;
+    height: auto;
+}
+
+.orderDetailContainer {
+    /* max-height: 440px; */
+    height: auto;
+}
+
+.cellDisplay{
+    font-size:1.1rem !important;
+}

@@ -1,0 +1,97 @@
+.addresses-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+
+    &__add-new-btn {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        border: 1px dashed rgba(0, 0, 0, 0.4);
+        color: rgb(0, 127, 240);
+        cursor: pointer;
+        margin-bottom: 10px;
+
+        & > i {
+            margin-right: 20px;
+            font-size: 1.6rem;
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__address {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-flow: row wrap;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+        &__left {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+
+            &__top {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 5px;
+                font-size: 1.5em;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+
+                &__badge {
+                    margin-left: 15px;
+                    height: 20px;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    font-size: 1.25rem;
+                    color: rgb(38, 188, 78);
+
+                    & > i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            &__middle,
+            &__bottom {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 1.4rem;
+            }
+        }
+
+        &__right {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 25px;
+
+            & > p {
+                font-size: 1.3rem;
+                color: rgb(0, 127, 240);
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
